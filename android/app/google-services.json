@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "207121966064",
+    "project_id": "sanaa-inventory-app",
+    "storage_bucket": "sanaa-inventory-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207121966064:android:f0dccf55179db89fb97335",
+        "android_client_info": {
+          "package_name": "com.example.inventory_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKe89dIA9LlYcXB-gfbq_EgnBzAkEGxZE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
