@@ -1,16 +1,35 @@
 # inventory_app
 
-A new Flutter project.
+# Task Management App (Firebase)
 
-## Getting Started
+## Overview
+This application is a task management app built using Flutter and Firebase. Users can create, update, and delete tasks with real-time synchronization using Firestore.
 
-This project is a starting point for a Flutter application.
+## Features
+- Add new tasks
+- Mark tasks as completed using a checkbox
+- Delete tasks
+- Real-time updates using StreamBuilder
+- User authentication (login, register, logout)
 
-A few resources to get you started if this is your first Flutter project:
+## Technologies Used
+- Flutter
+- Firebase Firestore (NoSQL database)
+- Firebase Authentication
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How It Works
+The app uses Firestore to store task data. A StreamBuilder listens to changes in the database and updates the UI automatically. Firebase Authentication ensures that users can securely log in and manage their tasks.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Validation
+Input validation is implemented to prevent users from adding empty tasks.
+
+## How to Run
+1. Clone the repository
+2. Run `flutter pub get`
+3. Run `flutter run`
+
+## APK
+The APK file is included for testing on Android devices.
+
+## Reflection
+This project helped me understand how to integrate Firebase with Flutter, manage real-time data using streams, and structure an application using models and service layers. I also learned how to implement user authentication and validate user input.
