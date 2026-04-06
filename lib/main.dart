@@ -1,10 +1,12 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 import 'firebase_options.dart';
 
 import 'firestore_service.dart';
 import 'task.dart';
-
+import 'login_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Task App',
       debugShowCheckedModeBanner: false,
-      home: const TaskScreen(),
+      home: const LoginScreen(),
     );
   }
 }
@@ -59,6 +61,19 @@ class _TaskScreenState extends State<TaskScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Task List"),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () async {
+              await FirebaseAuth.instance.signOut();
+              Navigator.pushReplacement(
+                // ignore: use_build_context_synchronously
+                context,
+                MaterialPageRoute(builder: (_) => const LoginScreen()),
+              );
+            },
+          )
+        ],
       ),
       body: Column(
         children: [
@@ -131,7 +146,7 @@ class _TaskScreenState extends State<TaskScreen> {
                             Task(
                               id: task.id,
                               name: task.name,
-                              isCompleted: value!,
+                              isCompleted: value,
                             ),
                           );
                         },
